@@ -1,0 +1,26 @@
+.admin-sidebar {
+    background: lightorange; /* Darker green */
+    color: #fff;
+    width: 250px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .admin-sidebar a {
+    color: black; /* Light green */
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+  }
+  
+  .admin-sidebar a:hover {
+    background: #ff6000; /* Hover effect */
+    padding-left: 15px;
+  }
+  
+
+  .admin-header ul li{
+    color:black;
+  }

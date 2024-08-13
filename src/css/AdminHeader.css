@@ -1,0 +1,22 @@
+.admin-header {
+    background: #fff; /* White background */
+    color: #333; /* Dark text color */
+    padding: 15px;
+    display: flex;
+    align-items: center;
+     /* Aligns items to the ends */
+    border-bottom: 1px solid #ddd; /* Light border for separation */
+  }
+  
+  .admin-header .logo {
+    height: 50px; /* Adjust logo size as needed */
+  }
+  
+  .admin-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color:black; /* Dark green text color */
+  }
+  .logo h1{
+    color:black;
+  }

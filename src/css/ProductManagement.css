@@ -1,0 +1,397 @@
+/* src/css/ProductManagement.css */
+
+.product-management {
+    padding: 20px;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Light blue gradient background */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-management:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+  }
+  
+  .product-form {
+    margin-bottom: 30px;
+    background: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slight shadow */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .product-form:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(0, 255, 214, 0.3), transparent 80%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .product-form:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .product-form h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #00796b; /* Darker green */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .product-form input,
+  .product-form textarea {
+    margin-bottom: 15px;
+    padding: 14px;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px; /* More rounded corners */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-form input:focus,
+  .product-form textarea:focus {
+    border-color: #00796b; /* Green border on focus */
+    box-shadow: 0 0 8px rgba(0, 121, 107, 0.2); /* Shadow on focus */
+    outline: none;
+  }
+  
+  .product-form input[type="file"] {
+    padding: 10px;
+    background: #e0f2f1; /* Subtle green background */
+    border: 2px dashed #00796b; /* Dashed border for file input */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-form input[type="file"]:hover {
+    background: #b2dfdb; /* Slightly darker green on hover */
+  }
+  
+  .product-form button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #00796b; /* Dark green background */
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .product-form button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 80%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .product-form button:hover {
+    background: #004d40; /* Darker green on hover */
+    transform: translateY(-2px);
+  }
+  
+  .product-form button:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .product-form .cancel-button {
+    background: #ff5252; /* Bright red for cancel */
+    margin-left: 10px;
+  }
+  
+  .product-form .cancel-button:hover {
+    background: #d50000; /* Darker red on hover */
+  }
+  
+  .product-list {
+    background: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slight shadow */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .product-list h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #00796b; /* Dark green */
+  }
+  
+  .product-list table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: fadeIn 1s ease;
+  }
+  
+  .product-list th,
+  .product-list td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .product-list th {
+    background: #00796b; /* Dark green header */
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .product-list tr:nth-child(even) {
+    background: #f0f0f0; /* Light grey for even rows */
+  }
+  
+  .product-list td img {
+    max-height: 100px; /* Adjust height */
+    max-width: 140px; /* Adjust width */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease;
+  }
+  
+  .product-list td img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  .product-list td button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .product-list td button.edit-button {
+    background: #4caf50; /* Green for edit */
+    color: #fff;
+  }
+  
+  .product-list td button.edit-button:hover {
+    background: #388e3c; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect */
+  }
+  
+  .product-list td button.delete-button {
+    background: #ff5252; /* Bright red for delete */
+    color: #fff;
+  }
+  
+  .product-list td button.delete-button:hover {
+    background: #d50000; /* Darker red on hover */
+    transform: translateY(-2px); /* Lift effect */
+  }
+  
+  .image-preview {
+    max-height: 100px; /* Limit height */
+    max-width: 100px; /* Limit width */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-preview:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .product-form input,
+  .product-form textarea {
+    z-index: 1; /* Ensure the input fields are above any overlapping elements */
+    position: relative; /* Keep input field positioned correctly */
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .product-list td button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-list td button.edit-button {
+    background: #4caf50; /* Green for edit */
+    color: #fff;
+}
+
+.product-list td button.edit-button:hover {
+    background: #388e3c; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.product-list td button.edit-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+    z-index: 0;
+}
+
+.product-list td button.edit-button:hover::before {
+    left: 100%;
+}
+
+.product-list td button.delete-button {
+    background: #ff4d4d; /* Red for delete */
+    color: #fff;
+    margin-left: 10px;
+}
+
+.product-list td button.delete-button:hover {
+    background: #e60000; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.product-list td button.delete-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+    z-index: 0;
+}
+
+.product-list td button.delete-button:hover::before {
+    left: 100%;
+}
+
+.product-list td button:active {
+    transform: translateY(1px); /* Slight press down effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.product-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-list th,
+.product-list td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.product-list th {
+  background-color: #00796b; /* Dark green background for table headers */
+  color: #ffffff; /* White text */
+}
+
+.product-list td img.image-preview {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #bdbdbd;
+}
+
+.product-list td button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-list td button:first-child {
+  background-color: #00796b; /* Dark green */
+  color: #ffffff;
+}
+
+.product-list td button:first-child:hover {
+  background-color: #004d40; /* Darker green on hover */
+}
+
+.product-list td button:last-child {
+  background-color: #ff5252; /* Bright red */
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.product-list td button:last-child:hover {
+  background-color: #d50000; /* Darker red on hover */
+}
+
+.product-management h2{
+  color:#FF6000;
+
+}
+.product-list h3{
+ color:#FF6000;
+}
+
+.product-form button:hover{
+  background:#FF6000;
+
+}
+.product-form button
+{
+  background:#FF6000;
+}
+
+.product-list td button:first-child{
+  background-color:#00A97F;
+  padding: 8px 15px;
+  margin-bottom: 8px; 
+  flex-direction: column; 
+  align-items: center; 
+  margin-left: 8px;
+}
+.product-list td button:last-child {
+  background-color:#FF6000;
+  padding: 8px 8px;
+  flex-direction: column; 
+  align-items: center;
+}
+
+
+
+
+
+
